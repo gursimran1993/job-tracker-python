@@ -1,0 +1,13 @@
+services:
+  database:
+    image: postgres:17
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/jobtracker/data
+    environment:
+      POSTGRES_USER: jobTracker
+      POSTGRES_DB: jobtracker_db
+      POSTGRES_PASSWORD: 9646568306g@S
+volumes:
+  postgres_data:
