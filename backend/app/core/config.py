@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy import URL
 # dialect+driver://username:password@host:port/database
 # postgressql+asyncpg://jobTracker:9646568306g@S@localhost:5434/jobtracker_db
-class settings(BaseSettings):
+class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file= ".env")
     app_name: str = "Job Tracker 3"
 
@@ -26,4 +26,4 @@ class settings(BaseSettings):
         return database_url
 
 #read and check all settings
-settings = settings()
+settings = Settings()
